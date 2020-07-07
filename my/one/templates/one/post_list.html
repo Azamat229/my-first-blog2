@@ -1,18 +1,12 @@
-<html>
-    <head>
-        <title>Azamat's tutorial</title>
-    </head>
-    <body>
-        <biv>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </biv>
+{% extends 'one/base.html' %}
+{% block content %}
     {% for p in post %}
-        <div>
-            <p>published: {{ p.published_date }}</p>
-            <h1><a href="">{{ p.title }}</a></h1>
+        <div class="post">
+            <div class="date">
+                <p>Опубликовано: {{ p.published_date }}</p>
+            </div>
+            <h1><a href={% url 'detail' aza=p.pk %}>{{ p.title }}</a></h1>
             <p>{{ p.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
-
-    </body>
-</html>
+{% endblock %}
