@@ -25,7 +25,7 @@ SECRET_KEY = '48txb99yv+rdwu$**akp1_jk@dps^o18i0m6g8$w_fmq%0&wr9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['azamat228.pythonanywhere.com' ]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -122,4 +122,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, "/home/azamat228/myproject/static")
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
